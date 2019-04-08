@@ -37,10 +37,7 @@ public class DataFlush {
     final static int Max_T=10;
     final static String Filepath="C:\\Users\\91916\\OneDrive\\Documents";
 
-    final static String Database_url="jdbc:mysql://localhost:3306/changsan?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=GMT&autoReconnect=true&useSSL=false";
 
-    private static final String APP_ID = "20190407000285289";
-    private static final String SECURITY_KEY = "qB6O4p63wfVKj3WAUZCV";
     public DataFlush(){
 
     }
@@ -59,7 +56,6 @@ public class DataFlush {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(Database_url,"root","zyj.1234");
             stmt = con.createStatement();
 
             ResultSet rs=stmt.executeQuery("select * from store_url_info");
